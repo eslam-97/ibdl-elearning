@@ -24,7 +24,7 @@ class Controller extends BaseController
         $search = $request['search'];
         $students = student::where('partner', 300)->where(function($q) use($search) {
             $q->where(DB::raw('lower(name)'), 'like', '%' . strtolower($search) . '%')
-            ->orWhere('logbook', 'Like', '%'.$search.'%')
+            ->orWhere('logbook', 'Like', $search)
             ->orWhere('code', 'Like', '%'.$search.'%');
         })->paginate(20);
         return view('dashboard',compact(['students','search']));

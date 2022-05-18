@@ -50,7 +50,7 @@
                         <td class="py-3"> {{ $student->logbook }} </td>
                         <td class="py-3"> {{ $student->code }} </td>
                         <td class="py-3">
-                           <a  href="#"><i class="fas fa-history text-primary fa-lg"></i></a>
+                           <a  href="{{route('trainee.edit',$student->id)}}"><i class="fas fa-history text-primary fa-lg"></i></a>
                         </td>
                     </tr>
                 @endforeach

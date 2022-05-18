@@ -9,4 +9,8 @@ class tracking extends Model
 {
     use HasFactory;
 
+    protected $table='95e__alllearning_reports';
+
+
+
 }
